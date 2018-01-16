@@ -1,11 +1,11 @@
 # spectre_meltdown
 
-Processor vulnerability proof of concepts.
+Processor vulnerability proof of concepts. I did not create these PoCs but have modified one slightly and have used them to perform some basic research relating to Microsoft's mitigations for Windows and provided some example screenshots below.
 
 - Spectre bounds check bypass and branch target injection vulnerability (CVE-2017-5715, CVE-2017-5753) requires a firmware (microcode) update.
 - Meltdown rogue data cache load vulnerability (CVE-2017-5754).
 
-Link. https://isc.sans.edu/forums/diary/Meltdown+and+Spectre+clearing+up+the+confusion/23197/
+SANS Link. https://isc.sans.edu/forums/diary/Meltdown+and+Spectre+clearing+up+the+confusion/23197/
 
 ## Usage for ca.exe
 - `ca.exe <offset integer>`
