@@ -4,7 +4,7 @@ Processor vulnerability proof of concepts. I did not create these PoCs but have 
 
 - Spectre bounds check bypass and branch target injection vulnerability (CVE-2017-5715, CVE-2017-5753) requires a firmware (microcode) update.
 - Meltdown rogue data cache load vulnerability (CVE-2017-5754).
-
+ 
 SANS Link. https://isc.sans.edu/forums/diary/Meltdown+and+Spectre+clearing+up+the+confusion/23197/
 
 ## Usage for ca.exe
