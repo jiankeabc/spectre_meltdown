@@ -24,9 +24,9 @@ e.g.
 
 ![spectre.exe screenshot](https://github.com/bao7uo/spectre_meltdown/raw/master/images/spectre_screenshot.png)
 
-## After patching ca.exe screenshot
+## After patching ca.exe
 
-![ca.exe screenshot](https://github.com/bao7uo/spectre_meltdown/raw/master/images/ca_after_screenshot.png)
+PoC still works.
 
 ## After patching spectre.exe screenshot
 
