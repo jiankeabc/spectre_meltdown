@@ -5,6 +5,9 @@
 e.g. 
 `ca.exe 1000`
 
+## Usage for spectre.exe
+`spectre.exe`
+
 ## Before patching ca.exe screenshot
 
 ![ca.exe screenshot](https://github.com/bao7uo/spectre_meltdown/raw/master/images/ca_screenshot.png)
